@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+:root {
+  --background: #fffdf7;
+  --foreground: #17131f;
+  --card: #ffffff;
+  --card-foreground: #17131f;
+  --popover: #ffffff;
+  --popover-foreground: #17131f;
+  --primary: #5b2bd0;
+  --primary-foreground: #ffffff;
+  --secondary: #ffd93d;
+  --secondary-foreground: #17131f;
+  --muted: #f2ecff;
+  --muted-foreground: #665f70;
+  --accent: #ff6b6b;
+  --accent-foreground: #17131f;
+  --destructive: #d92f2f;
+  --border: #17131f;
+  --input: #d9d2e1;
+  --ring: #5b2bd0;
+  --chart-1: #5b2bd0;
+  --chart-2: #ff6b6b;
+  --chart-3: #ffd93d;
+  --chart-4: #b9f46a;
+  --chart-5: #2788ff;
+  --radius: 1.25rem;
+  --sidebar: #fffdf7;
+  --sidebar-foreground: #17131f;
+  --sidebar-primary: #5b2bd0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffd93d;
+  --sidebar-accent-foreground: #17131f;
+  --sidebar-border: #17131f;
+  --sidebar-ring: #5b2bd0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ink: #17131f;
+  --color-cream: #fffdf7;
+  --color-violet: #5b2bd0;
+  --color-sun: #ffd93d;
+  --color-coral: #ff6b6b;
+  --color-lime: #b9f46a;
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fffdf7;
+    --foreground: #17131f;
+    --card: #ffffff;
+    --card-foreground: #17131f;
+    --popover: #ffffff;
+    --popover-foreground: #17131f;
+    --primary: #5b2bd0;
+    --primary-foreground: #ffffff;
+    --secondary: #ffd93d;
+    --secondary-foreground: #17131f;
+    --muted: #f2ecff;
+    --muted-foreground: #665f70;
+    --accent: #ff6b6b;
+    --accent-foreground: #17131f;
+    --destructive: #d92f2f;
+    --border: #17131f;
+    --input: #d9d2e1;
+    --ring: #5b2bd0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.display-title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.site-container {
+  width: min(100% - 2rem, 1380px);
+  margin-inline: auto;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 2px solid #17131f;
+  border-radius: 999px;
+  padding: 0.85rem 1.35rem;
+  font-weight: 900;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.btn-primary {
+  background: #5b2bd0;
+  color: white;
+  box-shadow: 4px 4px 0 #17131f;
+}
+
+.btn-secondary {
+  background: white;
+  color: #17131f;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 6px 0 #17131f;
+}
+
+.eyebrow {
+  margin-bottom: 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #5b2bd0;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 6vw, 5.3rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.arrow-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.25rem;
+  font-weight: 900;
+}
+
+@media (max-width: 640px) {
+  .site-container {
+    width: min(100% - 1.25rem, 1380px);
+  }
+}
