@@ -51,21 +51,11 @@ export default function Home() {
               <Sparkles className="h-4 w-4 text-violet" />
               Москва и Московская область
             </div>
-            <h1 className="display-title text-[clamp(4.1rem,10vw,8.4rem)] leading-[0.76] tracking-[-0.075em]">
-              ДЕТСКИЙ
-              <span className="block text-violet">ПРАЗДНИК,</span>
-              <span className="block">КОТОРЫЙ</span>
-              <span className="relative inline-block">
-                ВАУ!
-                <svg
-                  aria-hidden="true"
-                  className="absolute -bottom-3 left-0 h-4 w-full text-coral"
-                  viewBox="0 0 280 18"
-                  fill="none"
-                >
-                  <path d="M3 12C70 2 173 3 277 9" stroke="currentColor" strokeWidth="7" strokeLinecap="round" />
-                </svg>
-              </span>
+            <h1 className="hero-title text-[clamp(3.5rem,7.5vw,6.7rem)] leading-[0.88]">
+              <span className="block">Детский</span>
+              <span className="block text-coral">праздник,</span>
+              <span className="block">который</span>
+              <span className="hero-wow mt-3 inline-block">вау!</span>
             </h1>
             <p className="mt-9 max-w-xl text-lg font-semibold leading-relaxed md:text-xl">
               Придумываем, собираем и проводим живые праздники для детей 3–14 лет. Вы отдыхаете — мы держим тайминг, настроение и каждую деталь.

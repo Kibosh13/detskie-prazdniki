@@ -119,6 +119,26 @@ button {
   text-transform: uppercase;
 }
 
+.hero-title {
+  color: #4a2391;
+  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.hero-wow {
+  border: 2px solid #17131f;
+  border-radius: 999px;
+  background: #5b2bd0;
+  box-shadow: 6px 6px 0 #17131f;
+  color: #ffffff;
+  padding: 0.08em 0.32em 0.15em;
+  letter-spacing: -0.035em;
+  transform: rotate(-2deg);
+}
+
 .site-container {
   width: min(100% - 2rem, 1380px);
   margin-inline: auto;
