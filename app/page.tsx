@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { assetPath } from "@/lib/site-paths";
 import {
   ArrowRight,
   Atom,
@@ -85,7 +86,7 @@ export default function Home() {
             <div className="absolute inset-4 rotate-3 rounded-[3rem] border-2 border-ink bg-violet shadow-[10px_10px_0_#17131f]" />
             <div className="absolute inset-4 -rotate-2 overflow-hidden rounded-[3rem] border-2 border-ink bg-[#efe7ff]">
               <Image
-                src="/images/hero.png"
+                src={assetPath("/images/hero.png")}
                 alt="Дети и ведущая запускают конфетти на ярком празднике"
                 fill
                 priority
@@ -174,7 +175,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <article className="overflow-hidden rounded-[2.25rem] border-2 border-ink bg-white shadow-[7px_7px_0_#17131f]">
               <div className="relative aspect-[4/3] border-b-2 border-ink">
-                <Image src="/images/science.png" alt="Дети наблюдают за научным экспериментом" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+                <Image src={assetPath("/images/science.png")} alt="Дети наблюдают за научным экспериментом" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
                 <span className="absolute left-5 top-5 rounded-full border-2 border-ink bg-sun px-4 py-2 text-sm font-black">6–12 лет</span>
               </div>
               <div className="p-7 md:p-9">
@@ -190,7 +191,7 @@ export default function Home() {
             </article>
             <article className="overflow-hidden rounded-[2.25rem] border-2 border-ink bg-white shadow-[7px_7px_0_#17131f]">
               <div className="relative aspect-[4/3] border-b-2 border-ink">
-                <Image src="/images/pastel.png" alt="Дети танцуют среди воздушных шаров" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+                <Image src={assetPath("/images/pastel.png")} alt="Дети танцуют среди воздушных шаров" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
                 <span className="absolute left-5 top-5 rounded-full border-2 border-ink bg-coral px-4 py-2 text-sm font-black">7–14 лет</span>
               </div>
               <div className="p-7 md:p-9">

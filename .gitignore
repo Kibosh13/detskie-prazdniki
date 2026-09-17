@@ -12,6 +12,11 @@
 
 # testing
 /coverage
+/logs
+/tmp
+/.cache
+/.turbo
+*.log
 
 # next.js
 /.next/
@@ -31,11 +36,21 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# local data and private keys
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.key
+*.p12
+*.pfx
+
 # vercel
 .vercel
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo
 /dist/
 /.wrangler/
 # Checkout-local execution profile and tool state; never publish them.

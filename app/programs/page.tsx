@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/site-paths";
 import {
   ArrowRight,
   Atom,
@@ -50,7 +51,7 @@ const programs = [
     price: "от 21 900 ₽",
     description: "Безопасные эксперименты, настоящий холодный пар и опыт, в котором участвует каждый.",
     items: ["защитные очки", "8 эффектных опытов", "мороженое с азотом", "фото после шоу"],
-    image: "/images/science.png",
+    image: assetPath("/images/science.png"),
     color: "bg-violet text-white",
     icon: Atom,
   },
@@ -62,7 +63,7 @@ const programs = [
     price: "от 29 900 ₽",
     description: "Музыка, челленджи и танцевальный драйв для компании, которая уже выросла из сказок.",
     items: ["DJ и свет", "танцевальные баттлы", "селфи-челлендж", "конфетти-финал"],
-    image: "/images/pastel.png",
+    image: assetPath("/images/pastel.png"),
     color: "bg-lime",
     icon: Music2,
   },
@@ -103,7 +104,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-16 md:py-24">
+      <section id="shows" className="scroll-mt-20 bg-cream py-16 md:py-24">
         <div className="site-container space-y-6">
           {programs.map((program, index) => {
             const Icon = program.icon;

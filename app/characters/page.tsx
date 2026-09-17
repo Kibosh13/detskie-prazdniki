@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/site-paths";
 import {
   ArrowRight,
   Compass,
@@ -43,7 +44,7 @@ export default function CharactersPage() {
             </Link>
           </div>
           <div className="relative min-h-[460px] overflow-hidden rounded-[2.5rem] border-2 border-ink shadow-[8px_8px_0_#17131f]">
-            <Image src="/images/pastel.png" alt="Дети танцуют на ярком празднике" fill priority sizes="(max-width:1024px) 100vw, 52vw" className="object-cover" />
+            <Image src={assetPath("/images/pastel.png")} alt="Дети танцуют на ярком празднике" fill priority sizes="(max-width:1024px) 100vw, 52vw" className="object-cover" />
             <div className="absolute bottom-5 left-5 rotate-[-3deg] rounded-full border-2 border-ink bg-sun px-5 py-3 font-black shadow-[4px_4px_0_#17131f]">Живые эмоции, а не шаблон</div>
           </div>
         </div>
