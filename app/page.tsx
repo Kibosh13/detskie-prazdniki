@@ -48,21 +48,9 @@ export default function Home() {
       <section className="overflow-hidden border-b-2 border-ink bg-sun">
         <div className="site-container grid min-h-[720px] gap-10 py-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-20">
           <div className="relative z-10 max-w-[690px]">
-            <div className="mb-7 flex flex-wrap items-center gap-3">
-              <div className="relative h-20 w-20 rotate-[-2deg] overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[4px_4px_0_#17131f] md:h-24 md:w-24">
-                <Image
-                  src={assetPath("/images/fantastik-show-logo.png")}
-                  alt="Логотип компании Фантастик Шоу"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 80px, 96px"
-                  className="object-contain"
-                />
-              </div>
-              <div className="inline-flex rotate-[-2deg] items-center gap-2 rounded-full border-2 border-ink bg-white px-4 py-2 text-sm font-bold shadow-[4px_4px_0_#17131f]">
-                <Sparkles className="h-4 w-4 text-violet" />
-                Москва и Московская область
-              </div>
+            <div className="mb-7 inline-flex rotate-[-2deg] items-center gap-2 rounded-full border-2 border-ink bg-white px-4 py-2 font-bold shadow-[4px_4px_0_#17131f]">
+              <Sparkles className="h-4 w-4 text-violet" />
+              Москва и Московская область
             </div>
             <h1 className="hero-title text-[clamp(3.5rem,7.5vw,6.7rem)] leading-[0.88]">
               <span className="block">Детский</span>
@@ -96,29 +84,20 @@ export default function Home() {
 
           <div className="relative min-h-[530px] lg:min-h-[650px]">
             <div className="absolute inset-4 rotate-3 rounded-[3rem] border-2 border-ink bg-violet shadow-[10px_10px_0_#17131f]" />
-            <div className="absolute inset-4 -rotate-2 overflow-hidden rounded-[3rem] border-2 border-ink bg-[#efe7ff]">
+            <div className="absolute inset-4 -rotate-2 overflow-hidden rounded-[3rem] border-2 border-ink bg-white">
               <Image
-                src={assetPath("/images/hero.png")}
-                alt="Дети и ведущая запускают конфетти на ярком празднике"
+                src={assetPath("/images/fantastik-show-logo.png")}
+                alt="Логотип компании Фантастик Шоу"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-cover object-[63%_center]"
+                className="object-contain p-4 sm:p-8 lg:p-10"
               />
-              <div className="absolute inset-x-8 bottom-8 rounded-[2rem] border-2 border-ink bg-white/95 p-6 shadow-[6px_6px_0_#17131f] backdrop-blur-sm md:inset-x-12 md:p-8">
-                <p className="text-sm font-black uppercase tracking-[0.13em] text-violet">Быстрый старт</p>
-                <p className="mt-2 text-2xl font-black leading-tight md:text-3xl">
-                  3 идеи праздника и предварительная смета — за один разговор
-                </p>
-              </div>
               <div className="absolute left-8 top-8 rotate-[-8deg] rounded-full border-2 border-ink bg-coral px-5 py-3 text-sm font-black shadow-[4px_4px_0_#17131f]">
                 12 лет опыта
               </div>
               <div className="absolute right-8 top-20 rotate-6 rounded-full border-2 border-ink bg-white px-5 py-3 text-sm font-black shadow-[4px_4px_0_#17131f]">
                 4,9 ★
-              </div>
-              <div className="absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 text-center">
-                <span className="display-title block text-[8rem] leading-none text-violet/20 md:text-[11rem]">И</span>
               </div>
             </div>
           </div>
