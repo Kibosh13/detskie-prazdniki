@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock3, MapPin, MessageCircle, Phone } from "lucide-react";
 import { InquiryForm } from "@/components/inquiry-form";
 
 export const metadata: Metadata = {
   title: "Контакты и заявка",
-  description: "Обсудить детский праздник со студией ИСКРА и получить подборку программ.",
+  description: "Обсудить детский праздник с командой Фантастик Шоу и получить подборку программ.",
 };
 
 export default function ContactsPage() {
@@ -19,13 +19,9 @@ export default function ContactsPage() {
               Ответим, зададим несколько уточнений и предложим три варианта программы с предварительной сметой.
             </p>
             <div className="mt-10 grid gap-4">
-              <a className="flex items-center gap-4 rounded-2xl border-2 border-ink bg-white p-4 font-black" href="tel:+74950000000">
+              <a className="flex items-center gap-4 rounded-2xl border-2 border-ink bg-white p-4 font-black" href="tel:+79259245573">
                 <span className="grid h-11 w-11 place-items-center rounded-full bg-sun"><Phone className="h-5 w-5" /></span>
-                +7 (495) 000-00-00
-              </a>
-              <a className="flex items-center gap-4 rounded-2xl border-2 border-ink bg-white p-4 font-black" href="mailto:hello@iskra-prazdnik.ru">
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-coral"><Mail className="h-5 w-5" /></span>
-                hello@iskra-prazdnik.ru
+                8 (925) 924-55-73
               </a>
               <div className="flex items-center gap-4 rounded-2xl border-2 border-ink bg-white p-4 font-black">
                 <span className="grid h-11 w-11 place-items-center rounded-full bg-lime"><Clock3 className="h-5 w-5" /></span>

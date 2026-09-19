@@ -14,7 +14,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Персонажи",
-  description: "Авторские персонажи и ведущие для детских праздников ИСКРА.",
+  description: "Авторские персонажи и ведущие для детских праздников Фантастик Шоу.",
 };
 
 const characters = [

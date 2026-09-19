@@ -48,9 +48,21 @@ export default function Home() {
       <section className="overflow-hidden border-b-2 border-ink bg-sun">
         <div className="site-container grid min-h-[720px] gap-10 py-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-20">
           <div className="relative z-10 max-w-[690px]">
-            <div className="mb-7 inline-flex rotate-[-2deg] items-center gap-2 rounded-full border-2 border-ink bg-white px-4 py-2 font-bold shadow-[4px_4px_0_#17131f]">
-              <Sparkles className="h-4 w-4 text-violet" />
-              Москва и Московская область
+            <div className="mb-7 flex flex-wrap items-center gap-3">
+              <div className="relative h-20 w-20 rotate-[-2deg] overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[4px_4px_0_#17131f] md:h-24 md:w-24">
+                <Image
+                  src={assetPath("/images/fantastik-show-logo.png")}
+                  alt="Логотип компании Фантастик Шоу"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 80px, 96px"
+                  className="object-contain"
+                />
+              </div>
+              <div className="inline-flex rotate-[-2deg] items-center gap-2 rounded-full border-2 border-ink bg-white px-4 py-2 text-sm font-bold shadow-[4px_4px_0_#17131f]">
+                <Sparkles className="h-4 w-4 text-violet" />
+                Москва и Московская область
+              </div>
             </div>
             <h1 className="hero-title text-[clamp(3.5rem,7.5vw,6.7rem)] leading-[0.88]">
               <span className="block">Детский</span>

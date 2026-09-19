@@ -4,7 +4,7 @@ import { ArrowRight, BookOpenCheck, HeartHandshake, ShieldCheck, Sparkles, Users
 
 export const metadata: Metadata = {
   title: "О студии",
-  description: "Как команда ИСКРА создаёт детские праздники и отвечает за безопасность, тайминг и эмоции.",
+  description: "Как команда Фантастик Шоу создаёт детские праздники и отвечает за безопасность, тайминг и эмоции.",
 };
 
 const values = [
@@ -48,7 +48,7 @@ export default function AboutPage() {
             <p className="eyebrow">Наш подход</p>
             <h2 className="section-title">Детям весело. Родителям спокойно.</h2>
             <p className="mt-6 text-lg font-medium leading-relaxed text-[#625c6c]">
-              ИСКРА — это режиссёры, ведущие, декораторы и координаторы в одной команде. Мы соединяем игровую драматургию с понятной организацией, чтобы праздник ощущался лёгким для семьи.
+              Фантастик Шоу — это режиссёры, ведущие, декораторы и координаторы в одной команде. Мы соединяем игровую драматургию с понятной организацией, чтобы праздник ощущался лёгким для семьи.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">

@@ -8,8 +8,8 @@ const isGitHubPages = process.env.GITHUB_PAGES === "true";
 
 export const metadata: Metadata = {
   title: {
-    default: "ИСКРА — детские праздники в Москве",
-    template: "%s — ИСКРА",
+    default: "Фантастик Шоу — детские праздники в Москве",
+    template: "%s — Фантастик Шоу",
   },
   description:
     "Организация детских праздников под ключ в Москве и области: аниматоры, шоу, квесты, мастер-классы и оформление.",
