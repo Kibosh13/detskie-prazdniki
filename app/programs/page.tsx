@@ -94,7 +94,7 @@ export default function ProgramsPage() {
         <div className="site-container py-16 md:py-24">
           <p className="mb-5 text-sm font-black uppercase tracking-[0.15em] text-violet">Программы и цены</p>
           <div className="grid gap-9 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-            <h1 className="display-title max-w-5xl text-[clamp(4rem,11vw,9rem)] leading-[0.8] tracking-[-0.07em]">
+            <h1 className="max-w-5xl text-[clamp(3.4rem,8vw,7rem)] font-black uppercase leading-[0.88] tracking-[-0.04em] text-[#413656]">
               Выберите свой формат
             </h1>
             <p className="max-w-xl text-lg font-semibold leading-relaxed text-[#625c6c] md:text-xl">

@@ -76,16 +76,16 @@ export default function Home() {
             </div>
           </div>
 
-          <div id="video" className="relative min-h-[500px] scroll-mt-28 lg:min-h-[610px]">
+          <div id="video" className="relative aspect-[3/2] scroll-mt-28">
             <div className="absolute inset-4 rotate-2 rounded-[3rem] bg-[#dcd2ea]" />
-            <div className="absolute inset-4 overflow-hidden rounded-[3rem] border border-ink/20 bg-white shadow-[0_24px_70px_rgba(64,48,82,0.16)]">
+            <div className="absolute inset-4 overflow-hidden rounded-[3rem] border border-ink/20 bg-[#f7f1ec] shadow-[0_24px_70px_rgba(64,48,82,0.16)]">
               <Image
-                src={assetPath("/images/hero.png")}
+                src={assetPath("/images/hero-wide.png")}
                 alt="Фантастический праздник с ведущей и детьми"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-cover object-[63%_center] saturate-[0.78] contrast-[0.96]"
+                className="object-contain object-center saturate-[0.78] contrast-[0.96]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#352d42]/35 via-transparent to-white/10" />
               <div className="absolute bottom-7 left-7 right-7 flex flex-wrap items-center justify-between gap-4 rounded-[1.75rem] bg-white/90 p-5 backdrop-blur-md md:p-6">
