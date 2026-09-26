@@ -49,7 +49,7 @@ export default function Home() {
         <div className="site-container grid min-h-[700px] gap-10 py-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-center lg:py-20">
           <div className="relative z-10 max-w-[650px]">
             <p className="mb-5 text-sm font-black uppercase tracking-[0.16em] text-violet">Фантастик Шоу</p>
-            <h1 className="hero-title text-[clamp(2rem,4.7vw,4.9rem)] leading-[0.92]">
+            <h1 className="hero-title text-[clamp(1.75rem,8.2vw,2.15rem)] leading-[0.92] sm:text-[clamp(2.75rem,4.7vw,4.9rem)] lg:text-[clamp(2.75rem,4vw,4.9rem)] xl:text-[clamp(2.75rem,4.7vw,4.9rem)]">
               Организация <span className="text-[#a85b73]">фантастических</span> праздников в Москве и М.О.
             </h1>
             <div className="mt-9 grid gap-3 text-base font-bold sm:grid-cols-2">
@@ -88,13 +88,13 @@ export default function Home() {
                 className="object-contain object-center saturate-[0.78] contrast-[0.96]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#352d42]/35 via-transparent to-white/10" />
-              <div className="absolute bottom-7 left-7 right-7 flex flex-wrap items-center justify-between gap-4 rounded-[1.75rem] bg-white/90 p-5 backdrop-blur-md md:p-6">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[0.15em] text-violet">Фантастик Микс № 1</p>
-                  <p className="mt-1 text-xl font-black md:text-2xl">Посмотрите, как проходит праздник</p>
+              <div className="absolute bottom-3 left-3 right-3 flex flex-nowrap items-center justify-between gap-2 rounded-2xl bg-white/90 p-3 backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-5 sm:gap-4 sm:rounded-[1.75rem] sm:p-5 md:p-6">
+                <div className="min-w-0">
+                  <p className="text-[0.6rem] font-black uppercase tracking-[0.15em] text-violet sm:text-xs">Фантастик Микс № 1</p>
+                  <p className="mt-1 text-sm font-black leading-tight sm:text-xl md:text-2xl">Посмотрите, как проходит праздник</p>
                 </div>
-                <Link aria-label="Перейти к программам" className="grid h-14 w-14 place-items-center rounded-full bg-violet text-white" href="/programs">
-                  <Play className="ml-1 h-6 w-6 fill-current" />
+                <Link aria-label="Перейти к программам" className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-violet text-white sm:h-14 sm:w-14" href="/programs">
+                  <Play className="ml-0.5 h-4 w-4 fill-current sm:ml-1 sm:h-6 sm:w-6" />
                 </Link>
               </div>
             </div>
