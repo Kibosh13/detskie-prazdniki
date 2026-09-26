@@ -19,11 +19,11 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50 border-b border-ink/15 bg-white/95 backdrop-blur-md">
+    <header className="relative z-50 bg-white/95 backdrop-blur-md">
       <div className="site-container hidden min-h-[224px] grid-cols-[170px_minmax(0,1fr)] xl:grid">
         <Link
           aria-label="Фантастик Шоу — на главную"
-          className="row-span-3 flex items-center justify-center border-r border-ink/15 pr-5"
+          className="row-span-3 flex items-center justify-center pr-5"
           href="/"
           onClick={() => setOpen(false)}
         >
@@ -39,7 +39,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <div className="flex min-h-[72px] items-center justify-center gap-5 border-b border-ink/10 px-6">
+        <div className="flex min-h-[72px] items-center justify-center gap-5 px-6">
           <nav className="flex items-center gap-6" aria-label="Основная навигация">
             {nav.map(([label, href]) => (
               <Link className="text-sm font-bold transition-colors hover:text-violet" href={href} key={`${label}-${href}`}>
@@ -52,7 +52,7 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        <div className="flex min-h-[64px] items-center justify-end gap-3 border-b border-ink/10 px-6">
+        <div className="flex min-h-[64px] items-center justify-end gap-3 px-6">
           <a className="flex items-center gap-2 whitespace-nowrap text-base font-black tracking-tight text-violet" href="tel:+79259245573">
             <Phone className="h-4 w-4" strokeWidth={2.8} />
             +7 925 924-55-73
@@ -68,7 +68,7 @@ export function SiteHeader() {
       </div>
 
       <div className="site-container grid min-h-[146px] grid-cols-[82px_minmax(0,1fr)] grid-rows-[72px_auto] xl:hidden">
-        <Link aria-label="Фантастик Шоу — на главную" className="row-span-2 flex items-center border-r border-ink/10 pr-2" href="/" onClick={() => setOpen(false)}>
+        <Link aria-label="Фантастик Шоу — на главную" className="row-span-2 flex items-center pr-2" href="/" onClick={() => setOpen(false)}>
           <span className="relative block h-[78px] w-[80px] overflow-hidden rounded-xl bg-white">
             <Image
               src={assetPath("/images/fantastik-show-logo.png")}
@@ -81,7 +81,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <div className="flex items-center justify-end gap-3 border-b border-ink/10 pl-3">
+        <div className="flex items-center justify-end gap-3 pl-3">
           <a className="whitespace-nowrap text-[0.78rem] font-black tracking-tight text-violet sm:text-sm" href="tel:+79259245573">+7 925 924-55-73</a>
           <button
             aria-expanded={open}
@@ -100,7 +100,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-ink/15 bg-white px-5 py-6 xl:hidden">
+        <div className="bg-white px-5 py-6 xl:hidden">
           <nav className="site-container flex flex-col gap-4" aria-label="Мобильная навигация">
             {nav.map(([label, href]) => (
               <Link className="text-2xl font-black" href={href} key={`${label}-${href}`} onClick={() => setOpen(false)}>
