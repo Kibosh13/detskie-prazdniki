@@ -46,13 +46,11 @@ export default function Home() {
   return (
     <main>
       <section className="pastel-watercolor overflow-hidden border-b border-ink/15">
-        <div className="site-container grid min-h-[700px] gap-10 py-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-center lg:py-20">
-          <div className="relative z-10 max-w-[650px]">
-            <p className="mb-5 text-sm font-black uppercase tracking-[0.16em] text-violet">Фантастик Шоу</p>
-            <h1 className="hero-title text-[clamp(1.75rem,8.2vw,2.15rem)] leading-[0.92] sm:text-[clamp(2.75rem,4.7vw,4.9rem)] lg:text-[clamp(2.75rem,4vw,4.9rem)] xl:text-[clamp(2.75rem,4.7vw,4.9rem)]">
-              Организация <span className="text-[#a85b73]">фантастических</span> праздников в Москве и М.О.
-            </h1>
-            <div className="mt-9 grid gap-3 text-base font-bold sm:grid-cols-2">
+        <div className="site-container grid min-h-[540px] gap-10 py-10 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:items-center lg:py-14">
+          <div className="relative z-10 max-w-[560px]">
+            <h1 className="sr-only">Организация фантастических праздников в Москве и Московской области</h1>
+            <p className="eyebrow mb-5">Почему нам доверяют</p>
+            <div className="grid gap-3 text-base font-bold">
               {[
                 "Реалистичные костюмы",
                 "Профессиональные актёры",
@@ -67,7 +65,7 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link className="btn-primary group" href="/programs">
                 Выбрать программу
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
