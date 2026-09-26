@@ -23,7 +23,7 @@ const steps = [
 export default function AboutPage() {
   return (
     <main>
-      <section className="border-b-2 border-ink bg-sun">
+      <section className="pastel-watercolor border-b border-ink/15">
         <div className="site-container py-16 md:py-24">
           <div className="max-w-6xl">
             <p className="eyebrow">О студии</p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24">
         <div className="site-container grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow">Наш подход</p>
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {values.map(([Icon, title, text], index) => (
-              <article className={`rounded-[2rem] border-2 border-ink p-6 ${index === 0 ? "bg-coral" : index === 1 ? "bg-[#c7b4ff]" : "bg-lime"}`} key={title as string}>
+              <article className={`rounded-[2rem] border-2 border-ink p-6 ${index === 0 ? "bg-coral" : index === 1 ? "bg-[#ddd4ef]" : "bg-lime"}`} key={title as string}>
                 <Icon className="h-10 w-10" />
                 <h3 className="mt-14 text-2xl font-black">{title as string}</h3>
                 <p className="mt-3 font-semibold leading-relaxed opacity-75">{text as string}</p>
@@ -63,7 +63,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y-2 border-ink bg-violet py-16 text-white md:py-24">
+      <section className="border-y border-ink/15 bg-[#6c5796] py-16 text-white md:py-24">
         <div className="site-container">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24">
         <div className="site-container grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <div className="mb-5 flex gap-2 text-violet"><Sparkles /><Sparkles /><Sparkles /></div>

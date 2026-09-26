@@ -3,38 +3,38 @@
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
 :root {
-  --background: #fffdf7;
-  --foreground: #17131f;
+  --background: #ffffff;
+  --foreground: #282331;
   --card: #ffffff;
-  --card-foreground: #17131f;
+  --card-foreground: #282331;
   --popover: #ffffff;
-  --popover-foreground: #17131f;
-  --primary: #5b2bd0;
+  --popover-foreground: #282331;
+  --primary: #7053ad;
   --primary-foreground: #ffffff;
-  --secondary: #ffd93d;
-  --secondary-foreground: #17131f;
-  --muted: #f2ecff;
+  --secondary: #f4e6b6;
+  --secondary-foreground: #282331;
+  --muted: #f7f3fa;
   --muted-foreground: #665f70;
-  --accent: #ff6b6b;
-  --accent-foreground: #17131f;
+  --accent: #efb8bd;
+  --accent-foreground: #282331;
   --destructive: #d92f2f;
-  --border: #17131f;
+  --border: #282331;
   --input: #d9d2e1;
-  --ring: #5b2bd0;
-  --chart-1: #5b2bd0;
-  --chart-2: #ff6b6b;
-  --chart-3: #ffd93d;
-  --chart-4: #b9f46a;
+  --ring: #7053ad;
+  --chart-1: #7053ad;
+  --chart-2: #efb8bd;
+  --chart-3: #f4e6b6;
+  --chart-4: #d9edc8;
   --chart-5: #2788ff;
   --radius: 1.25rem;
-  --sidebar: #fffdf7;
-  --sidebar-foreground: #17131f;
-  --sidebar-primary: #5b2bd0;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #282331;
+  --sidebar-primary: #7053ad;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ffd93d;
-  --sidebar-accent-foreground: #17131f;
-  --sidebar-border: #17131f;
-  --sidebar-ring: #5b2bd0;
+  --sidebar-accent: #f4e6b6;
+  --sidebar-accent-foreground: #282331;
+  --sidebar-border: #282331;
+  --sidebar-ring: #7053ad;
 }
 
 @theme inline {
@@ -56,12 +56,12 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-ink: #17131f;
-  --color-cream: #fffdf7;
-  --color-violet: #5b2bd0;
-  --color-sun: #ffd93d;
-  --color-coral: #ff6b6b;
-  --color-lime: #b9f46a;
+  --color-ink: #282331;
+  --color-cream: #fffdfa;
+  --color-violet: #7053ad;
+  --color-sun: #f4e6b6;
+  --color-coral: #efb8bd;
+  --color-lime: #d9edc8;
   --radius-sm: calc(var(--radius) - 8px);
   --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
@@ -71,24 +71,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fffdf7;
-    --foreground: #17131f;
+    --background: #ffffff;
+    --foreground: #282331;
     --card: #ffffff;
-    --card-foreground: #17131f;
+    --card-foreground: #282331;
     --popover: #ffffff;
-    --popover-foreground: #17131f;
-    --primary: #5b2bd0;
+    --popover-foreground: #282331;
+    --primary: #7053ad;
     --primary-foreground: #ffffff;
-    --secondary: #ffd93d;
-    --secondary-foreground: #17131f;
-    --muted: #f2ecff;
+    --secondary: #f4e6b6;
+    --secondary-foreground: #282331;
+    --muted: #f7f3fa;
     --muted-foreground: #665f70;
-    --accent: #ff6b6b;
-    --accent-foreground: #17131f;
+    --accent: #efb8bd;
+    --accent-foreground: #282331;
     --destructive: #d92f2f;
-    --border: #17131f;
+    --border: #282331;
     --input: #d9d2e1;
-    --ring: #5b2bd0;
+    --ring: #7053ad;
   }
 }
 
@@ -108,6 +108,15 @@ body {
   font-size: 16px;
 }
 
+.pastel-watercolor {
+  background-color: #fffdfa;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22)),
+    var(--pastel-watercolor-image);
+  background-position: center;
+  background-size: cover;
+}
+
 a,
 button {
   -webkit-tap-highlight-color: transparent;
@@ -120,7 +129,7 @@ button {
 }
 
 .hero-title {
-  color: #4a2391;
+  color: #553a84;
   font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
   font-weight: 900;
   letter-spacing: -0.055em;
@@ -129,10 +138,10 @@ button {
 }
 
 .hero-wow {
-  border: 2px solid #17131f;
+  border: 2px solid #282331;
   border-radius: 999px;
-  background: #5b2bd0;
-  box-shadow: 6px 6px 0 #17131f;
+  background: #7053ad;
+  box-shadow: 6px 6px 0 #282331;
   color: #ffffff;
   padding: 0.08em 0.32em 0.15em;
   letter-spacing: -0.035em;
@@ -151,7 +160,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  border: 2px solid #17131f;
+  border: 2px solid #282331;
   border-radius: 999px;
   padding: 0.85rem 1.35rem;
   font-weight: 900;
@@ -159,20 +168,20 @@ button {
 }
 
 .btn-primary {
-  background: #5b2bd0;
+  background: #7053ad;
   color: white;
-  box-shadow: 4px 4px 0 #17131f;
+  box-shadow: 4px 4px 0 #282331;
 }
 
 .btn-secondary {
   background: white;
-  color: #17131f;
+  color: #282331;
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 5px 6px 0 #17131f;
+  box-shadow: 5px 6px 0 #282331;
 }
 
 .eyebrow {
@@ -181,7 +190,7 @@ button {
   font-weight: 900;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #5b2bd0;
+  color: #7053ad;
 }
 
 .section-title {

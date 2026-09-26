@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function ContactsPage() {
   return (
-    <main className="bg-[#f1eaff]">
-      <section className="border-b-2 border-ink">
+    <main className="pastel-watercolor">
+      <section className="border-b border-ink/15">
         <div className="site-container grid gap-10 py-14 lg:grid-cols-[0.78fr_1.22fr] lg:py-20">
           <div>
             <p className="eyebrow">Давайте знакомиться</p>
@@ -28,7 +28,7 @@ export default function ContactsPage() {
                 Ежедневно, 09:00–21:00
               </div>
               <div className="flex items-center gap-4 rounded-2xl border-2 border-ink bg-white p-4 font-black">
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-[#c7b4ff]"><MapPin className="h-5 w-5" /></span>
+                <span className="grid h-11 w-11 place-items-center rounded-full bg-[#ddd4ef]"><MapPin className="h-5 w-5" /></span>
                 Москва и Московская область
               </div>
             </div>

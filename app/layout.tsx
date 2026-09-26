@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { assetPath } from "@/lib/site-paths";
@@ -29,7 +30,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <body className="antialiased">
+      <body
+        className="antialiased"
+        style={{
+          "--pastel-watercolor-image": `url("${assetPath("/images/pastel-watercolor-bg.png")}")`,
+        } as CSSProperties}
+      >
         <SiteHeader />
         {children}
         <SiteFooter />

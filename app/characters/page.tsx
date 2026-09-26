@@ -22,14 +22,14 @@ const characters = [
   [Rainbow, "Хранительница радуги", "3–7 лет", "bg-coral"],
   [FlaskConical, "Профессор Бум", "6–12 лет", "bg-sun"],
   [Gamepad2, "Пиксель и Кнопка", "7–13 лет", "bg-lime"],
-  [Compass, "Капитан Ветер", "4–9 лет", "bg-[#8fd9ff]"],
-  [IceCreamBowl, "Мастер сладостей", "5–10 лет", "bg-[#f3c4ff]"],
+  [Compass, "Капитан Ветер", "4–9 лет", "bg-[#cce7ef]"],
+  [IceCreamBowl, "Мастер сладостей", "5–10 лет", "bg-[#ead8ef]"],
 ];
 
 export default function CharactersPage() {
   return (
     <main>
-      <section className="overflow-hidden border-b-2 border-ink bg-[#f1eaff]">
+      <section className="pastel-watercolor overflow-hidden border-b border-ink/15">
         <div className="site-container grid gap-10 py-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-20">
           <div>
             <p className="eyebrow">Наши герои</p>
@@ -50,7 +50,7 @@ export default function CharactersPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24">
         <div className="site-container">
           <div className="max-w-4xl">
             <p className="eyebrow">Авторские образы</p>
@@ -76,7 +76,7 @@ export default function CharactersPage() {
         </div>
       </section>
 
-      <section className="border-y-2 border-ink bg-sun py-16 md:py-24">
+      <section className="pastel-watercolor border-y border-ink/15 py-16 md:py-24">
         <div className="site-container grid gap-8 lg:grid-cols-2 lg:items-center">
           <h2 className="text-4xl font-black leading-tight tracking-tight md:text-6xl">Не нашли подходящий образ?</h2>
           <div>

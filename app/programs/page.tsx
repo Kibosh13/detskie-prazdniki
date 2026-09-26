@@ -75,7 +75,7 @@ const programs = [
     price: "от 65 000 ₽",
     description: "Придумываем концепцию, собираем подрядчиков и координируем событие от встречи гостей до финала.",
     items: ["персональная концепция", "площадка и оформление", "шоу и программа", "координатор на площадке"],
-    color: "bg-[#c7b4ff]",
+    color: "bg-[#ddd4ef]",
     icon: PartyPopper,
   },
 ];
@@ -90,21 +90,21 @@ const extras = [
 export default function ProgramsPage() {
   return (
     <main>
-      <section className="border-b-2 border-ink bg-violet text-white">
+      <section className="pastel-watercolor border-b border-ink/15">
         <div className="site-container py-16 md:py-24">
-          <p className="mb-5 text-sm font-black uppercase tracking-[0.15em] text-sun">Программы и цены</p>
+          <p className="mb-5 text-sm font-black uppercase tracking-[0.15em] text-violet">Программы и цены</p>
           <div className="grid gap-9 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <h1 className="display-title max-w-5xl text-[clamp(4rem,11vw,9rem)] leading-[0.8] tracking-[-0.07em]">
               Выберите свой формат
             </h1>
-            <p className="max-w-xl text-lg font-semibold leading-relaxed text-white/80 md:text-xl">
+            <p className="max-w-xl text-lg font-semibold leading-relaxed text-[#625c6c] md:text-xl">
               Любую программу адаптируем под возраст, площадку и интересы ребёнка. Цена фиксируется в смете до праздника.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="shows" className="scroll-mt-20 bg-cream py-16 md:py-24">
+      <section id="shows" className="scroll-mt-20 bg-white py-16 md:py-24">
         <div className="site-container space-y-6">
           {programs.map((program, index) => {
             const Icon = program.icon;
@@ -166,7 +166,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section id="extras" className="border-y-2 border-ink bg-sun py-16 md:py-24 scroll-mt-20">
+      <section id="extras" className="pastel-watercolor scroll-mt-20 border-y border-ink/15 py-16 md:py-24">
         <div className="site-container">
           <p className="eyebrow">Можно добавить</p>
           <h2 className="section-title max-w-4xl">Соберём всё в одну историю</h2>
