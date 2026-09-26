@@ -1,2 +1,2 @@
-:HL["/detskie-prazdniki/_next/static/chunks/04~29ayuc8v1..css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"programs","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"h04Pw9geC_0r3QsNZL23O"}
+:HL["/detskie-prazdniki/_next/static/chunks/0bdsjpo5j~.ko.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"programs","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"IHeCt_UC9w_y8ethZhZ2Y"}
