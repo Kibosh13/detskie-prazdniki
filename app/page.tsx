@@ -45,7 +45,7 @@ const directions = [
 export default function Home() {
   return (
     <main>
-      <section className="pastel-watercolor overflow-hidden border-b border-ink/15">
+      <section className="hero-section pastel-watercolor border-b border-ink/15">
         <div className="site-container grid min-h-[540px] gap-10 py-10 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:items-center lg:py-14">
           <div className="relative z-10 max-w-[560px]">
             <h1 className="sr-only">Организация фантастических праздников в Москве и Московской области</h1>
@@ -74,16 +74,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div id="video" className="relative aspect-[3/2] scroll-mt-28">
-            <div className="absolute inset-4 rotate-2 rounded-[3rem] bg-[#dcd2ea]" />
-            <div className="absolute inset-4 overflow-hidden rounded-[3rem] border border-ink/20 bg-[#f7f1ec] shadow-[0_24px_70px_rgba(64,48,82,0.16)]">
+          <div id="video" className="relative min-w-0 aspect-[3/2] scroll-mt-28">
+            <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-[#f7f1ec] shadow-[0_24px_70px_rgba(64,48,82,0.16)] sm:rounded-[2.5rem]">
               <Image
                 src={assetPath("/images/hero-wide.png")}
                 alt="Фантастический праздник с ведущей и детьми"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-contain object-center saturate-[0.78] contrast-[0.96]"
+                className="object-cover object-center saturate-[0.78] contrast-[0.96]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#352d42]/35 via-transparent to-white/10" />
               <div className="absolute bottom-3 left-3 right-3 flex flex-nowrap items-center justify-between gap-2 rounded-2xl bg-white/90 p-3 backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-5 sm:gap-4 sm:rounded-[1.75rem] sm:p-5 md:p-6">
