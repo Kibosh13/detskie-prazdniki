@@ -19,7 +19,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50 bg-white/95 backdrop-blur-md">
+    <header className="relative z-50 bg-[#fffefa]/95 shadow-[0_8px_28px_rgba(37,50,82,0.06)] backdrop-blur-md">
       <div className="site-container hidden min-h-[224px] grid-cols-[170px_minmax(0,1fr)] xl:grid">
         <Link
           aria-label="Фантастик Шоу — на главную"
@@ -41,29 +41,29 @@ export function SiteHeader() {
 
         <div className="flex min-h-[72px] items-center justify-center gap-5 px-6">
           <nav className="flex items-center gap-6" aria-label="Основная навигация">
-            {nav.map(([label, href]) => (
-              <Link className="text-sm font-bold transition-colors hover:text-violet" href={href} key={`${label}-${href}`}>
+            {nav.map(([label, href], index) => (
+              <Link className={`text-sm font-black transition-transform hover:-translate-y-0.5 ${index % 4 === 0 ? "text-[#128fd0]" : index % 4 === 1 ? "text-[#ea3454]" : index % 4 === 2 ? "text-[#35a64b]" : "text-[#e47a20]"}`} href={href} key={`${label}-${href}`}>
                 {label}
               </Link>
             ))}
           </nav>
-          <Link aria-label="Найти программу" className="grid h-10 w-10 place-items-center rounded-full border border-ink/25 bg-[#faf8fb] text-violet transition-colors hover:bg-[#f1ecf7]" href="/programs">
+          <Link aria-label="Найти программу" className="grid h-10 w-10 place-items-center rounded-full border-2 border-[#128fd0]/35 bg-[#eaf8ff] text-[#128fd0] transition-transform hover:scale-105" href="/programs">
             <Search className="h-5 w-5" />
           </Link>
         </div>
 
         <div className="flex min-h-[64px] items-center justify-end gap-3 px-6">
-          <a className="flex items-center gap-2 whitespace-nowrap text-base font-black tracking-tight text-violet" href="tel:+79259245573">
+          <a className="flex items-center gap-2 whitespace-nowrap text-base font-black tracking-tight text-[#ea3454]" href="tel:+79259245573">
             <Phone className="h-4 w-4" strokeWidth={2.8} />
             +7 925 924-55-73
           </a>
-          <Link aria-label="Написать в MAX" className="grid h-10 min-w-10 place-items-center rounded-full border border-ink/25 bg-white px-2 text-[0.65rem] font-black" href="/contacts">MAX</Link>
-          <a aria-label="Написать в WhatsApp" className="grid h-10 w-10 place-items-center rounded-full border border-ink/25 bg-white text-violet" href="https://wa.me/79259245573" rel="noreferrer" target="_blank"><MessageCircle className="h-5 w-5" /></a>
-          <Link aria-label="Написать в Telegram" className="grid h-10 w-10 place-items-center rounded-full border border-ink/25 bg-white text-violet" href="/contacts"><Send className="h-4 w-4" /></Link>
+          <Link aria-label="Написать в MAX" className="grid h-10 min-w-10 place-items-center rounded-full border-2 border-[#ffcf3f] bg-[#fff8d7] px-2 text-[0.65rem] font-black" href="/contacts">MAX</Link>
+          <a aria-label="Написать в WhatsApp" className="grid h-10 w-10 place-items-center rounded-full border-2 border-[#74d45d] bg-[#efffe9] text-[#35a64b]" href="https://wa.me/79259245573" rel="noreferrer" target="_blank"><MessageCircle className="h-5 w-5" /></a>
+          <Link aria-label="Написать в Telegram" className="grid h-10 w-10 place-items-center rounded-full border-2 border-[#128fd0] bg-[#eaf8ff] text-[#128fd0]" href="/contacts"><Send className="h-4 w-4" /></Link>
         </div>
 
-        <p className="flex min-h-[88px] items-center justify-center px-6 text-center text-[clamp(1.25rem,2.05vw,2rem)] font-black uppercase leading-[1.05] tracking-[-0.04em] text-violet">
-          Организация&nbsp;<span className="text-[#a85b73]">фантастических</span>&nbsp;праздников в Москве и М.О.
+        <p className="flex min-h-[88px] items-center justify-center px-6 text-center font-[family-name:var(--font-comfortaa)] text-[clamp(1.15rem,1.9vw,1.85rem)] font-bold uppercase leading-[1.12] tracking-[-0.035em]">
+          <span className="brand-blue">Организация&nbsp;</span><span className="brand-red">фантастических&nbsp;</span><span className="brand-green">праздников&nbsp;</span><span className="brand-orange">в Москве и М.О.</span>
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export function SiteHeader() {
         </Link>
 
         <div className="flex items-center justify-end gap-3 pl-3">
-          <a className="whitespace-nowrap text-[0.78rem] font-black tracking-tight text-violet sm:text-sm" href="tel:+79259245573">+7 925 924-55-73</a>
+          <a className="whitespace-nowrap text-[0.78rem] font-black tracking-tight text-[#ea3454] sm:text-sm" href="tel:+79259245573">+7 925 924-55-73</a>
           <button
             aria-expanded={open}
             aria-label={open ? "Закрыть меню" : "Открыть меню"}
@@ -94,8 +94,8 @@ export function SiteHeader() {
           </button>
         </div>
 
-        <p className="flex items-center justify-center px-3 py-3 text-center text-[clamp(0.92rem,4.2vw,1.15rem)] font-black uppercase leading-[1.05] tracking-[-0.035em] text-violet">
-          Организация фантастических праздников в Москве и М.О.
+        <p className="flex flex-wrap items-center justify-center px-3 py-3 text-center font-[family-name:var(--font-comfortaa)] text-[clamp(0.82rem,4vw,1.05rem)] font-bold uppercase leading-[1.15] tracking-[-0.025em]">
+          <span className="brand-blue">Организация&nbsp;</span><span className="brand-red">фантастических&nbsp;</span><span className="brand-green">праздников&nbsp;</span><span className="brand-orange">в Москве и М.О.</span>
         </p>
       </div>
 
@@ -107,10 +107,10 @@ export function SiteHeader() {
                 {label}
               </Link>
             ))}
-            <Link className="flex items-center gap-2 text-xl font-black text-violet" href="/programs" onClick={() => setOpen(false)}>
+            <Link className="flex items-center gap-2 text-xl font-black text-[#128fd0]" href="/programs" onClick={() => setOpen(false)}>
               <Search className="h-5 w-5" /> Поиск программ
             </Link>
-            <a className="mt-2 flex items-center gap-2 text-xl font-black text-violet" href="tel:+79259245573"><Phone className="h-5 w-5" />+7 925 924-55-73</a>
+            <a className="mt-2 flex items-center gap-2 text-xl font-black text-[#ea3454]" href="tel:+79259245573"><Phone className="h-5 w-5" />+7 925 924-55-73</a>
             <div className="mt-2 flex flex-wrap gap-2">
               <Link className="rounded-full border border-ink/25 px-4 py-2 text-sm font-black" href="/contacts" onClick={() => setOpen(false)}>MAX</Link>
               <a className="rounded-full border border-ink/25 px-4 py-2 text-sm font-black" href="https://wa.me/79259245573" rel="noreferrer" target="_blank">WhatsApp</a>

@@ -14,7 +14,7 @@ export default function ContactsPage() {
         <div className="site-container grid gap-10 py-14 lg:grid-cols-[0.78fr_1.22fr] lg:py-20">
           <div>
             <p className="eyebrow">Давайте знакомиться</p>
-            <h1 className="display-title text-[clamp(4rem,9vw,8rem)] leading-[0.8] tracking-[-0.07em]">Расскажите о празднике</h1>
+            <h1 className="display-title text-[clamp(3.4rem,8vw,7rem)] leading-[0.95] tracking-[-0.055em]"><span className="brand-blue">Расскажите</span><br /><span className="brand-red">о празднике</span></h1>
             <p className="mt-7 max-w-xl text-lg font-semibold leading-relaxed md:text-xl">
               Ответим, зададим несколько уточнений и предложим три варианта программы с предварительной сметой.
             </p>

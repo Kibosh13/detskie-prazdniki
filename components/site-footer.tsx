@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { assetPath } from "@/lib/site-paths";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t-2 border-ink bg-ink text-white">
+    <footer className="border-t-2 border-[#128fd0] bg-[#174a86] text-white">
       <div className="site-container grid gap-12 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <div className="relative h-24 w-24 overflow-hidden rounded-2xl bg-white">
@@ -31,7 +30,7 @@ export function SiteFooter() {
         <div>
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.14em] text-white/45">Связаться</p>
           <a className="flex items-center gap-2 text-xl font-black" href="tel:+79259245573">
-            8 (925) 924-55-73 <ArrowUpRight className="h-5 w-5" />
+            8 (925) 924-55-73
           </a>
           <p className="mt-5 text-sm text-white/45">Москва и Московская область</p>
         </div>

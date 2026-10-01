@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { assetPath } from "@/lib/site-paths";
 import {
-  ArrowRight,
   Atom,
   Camera,
   Check,
@@ -29,7 +28,7 @@ const programs = [
     price: "от 9 900 ₽",
     description: "Динамичная программа для небольшого праздника дома, в кафе или детском саду.",
     items: ["герой на выбор", "музыка и тематический реквизит", "10+ игр и мини-квест", "фигурки из шаров"],
-    color: "bg-sun",
+    color: "bg-[#ffcf3f]",
     icon: Sparkles,
   },
   {
@@ -40,7 +39,7 @@ const programs = [
     price: "от 18 900 ₽",
     description: "Сюжетный квест с командными заданиями, неожиданными поворотами и ярким финалом.",
     items: ["два ведущих в образах", "авторский квест", "объёмный реквизит", "мини-дискотека"],
-    color: "bg-coral",
+    color: "bg-[#ff8fa3]",
     icon: Crown,
   },
   {
@@ -52,7 +51,7 @@ const programs = [
     description: "Безопасные эксперименты, настоящий холодный пар и опыт, в котором участвует каждый.",
     items: ["защитные очки", "8 эффектных опытов", "мороженое с азотом", "фото после шоу"],
     image: assetPath("/images/science.png"),
-    color: "bg-violet text-white",
+    color: "bg-[#128fd0] text-white",
     icon: Atom,
   },
   {
@@ -64,7 +63,7 @@ const programs = [
     description: "Музыка, челленджи и танцевальный драйв для компании, которая уже выросла из сказок.",
     items: ["DJ и свет", "танцевальные баттлы", "селфи-челлендж", "конфетти-финал"],
     image: assetPath("/images/pastel.png"),
-    color: "bg-lime",
+    color: "bg-[#a9e889]",
     icon: Music2,
   },
   {
@@ -75,7 +74,7 @@ const programs = [
     price: "от 65 000 ₽",
     description: "Придумываем концепцию, собираем подрядчиков и координируем событие от встречи гостей до финала.",
     items: ["персональная концепция", "площадка и оформление", "шоу и программа", "координатор на площадке"],
-    color: "bg-[#ddd4ef]",
+    color: "bg-[#ffb36b]",
     icon: PartyPopper,
   },
 ];
@@ -94,8 +93,8 @@ export default function ProgramsPage() {
         <div className="site-container py-16 md:py-24">
           <p className="mb-5 text-sm font-black uppercase tracking-[0.15em] text-violet">Программы и цены</p>
           <div className="grid gap-9 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-            <h1 className="max-w-5xl text-[clamp(3.4rem,8vw,7rem)] font-black uppercase leading-[0.88] tracking-[-0.04em] text-[#413656]">
-              Выберите свой формат
+            <h1 className="max-w-5xl font-[family-name:var(--font-comfortaa)] text-[clamp(3.1rem,7vw,6.5rem)] font-bold leading-[0.96] tracking-[-0.05em]">
+              <span className="brand-blue">Выберите свой</span> <span className="brand-red">формат</span>
             </h1>
             <p className="max-w-xl text-lg font-semibold leading-relaxed text-[#625c6c] md:text-xl">
               Любую программу адаптируем под возраст, площадку и интересы ребёнка. Цена фиксируется в смете до праздника.
@@ -110,7 +109,7 @@ export default function ProgramsPage() {
             const Icon = program.icon;
             return (
               <article
-                className="grid overflow-hidden rounded-[2rem] border-2 border-ink bg-white shadow-[7px_7px_0_#17131f] lg:grid-cols-[0.72fr_1.28fr]"
+                className="party-card grid overflow-hidden rounded-[2rem] border-2 border-ink/30 bg-white lg:grid-cols-[0.72fr_1.28fr]"
                 key={program.title}
               >
                 <div className={`relative min-h-[300px] border-b-2 border-ink p-7 lg:border-b-0 lg:border-r-2 ${program.color}`}>
@@ -157,7 +156,7 @@ export default function ProgramsPage() {
                     ))}
                   </div>
                   <Link className="btn-primary mt-8" href={`/contacts?program=${encodeURIComponent(program.title)}`}>
-                    Хочу эту программу <ArrowRight className="h-5 w-5" />
+                    Хочу эту программу
                   </Link>
                 </div>
               </article>
@@ -182,14 +181,14 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-ink py-16 text-white md:py-24">
+      <section className="bg-[#ea3454] py-16 text-white md:py-24">
         <div className="site-container grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="mb-3 text-sm font-black uppercase tracking-[0.15em] text-sun">Не знаете, что выбрать?</p>
             <h2 className="max-w-4xl text-4xl font-black leading-tight tracking-tight md:text-6xl">Расскажите про ребёнка — предложим 3 подходящих сценария</h2>
           </div>
           <Link className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full border-2 border-white bg-sun px-7 font-black text-ink" href="/contacts">
-            Получить подборку <ArrowRight className="h-5 w-5" />
+            Получить подборку
           </Link>
         </div>
       </section>

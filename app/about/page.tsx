@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpenCheck, HeartHandshake, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { BookOpenCheck, HeartHandshake, ShieldCheck, Sparkles, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "О студии",
@@ -27,14 +27,14 @@ export default function AboutPage() {
         <div className="site-container py-16 md:py-24">
           <div className="max-w-6xl">
             <p className="eyebrow">О студии</p>
-            <h1 className="display-title text-[clamp(4rem,11vw,9rem)] leading-[0.8] tracking-[-0.07em]">
-              За ярким праздником — точная работа
+            <h1 className="display-title text-[clamp(3.4rem,9vw,7.5rem)] leading-[0.95] tracking-[-0.055em]">
+              <span className="brand-blue">За ярким праздником —</span><br /> <span className="brand-red">любящая команда</span>
             </h1>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {[["12", "лет создаём события"], ["1 800+", "проведённых праздников"], ["46", "артистов и ведущих"]].map(([number, label]) => (
+            {[["12", "лет создаём события"], ["1 800+", "проведённых праздников"], ["46", "артистов и ведущих"]].map(([number, label], index) => (
               <div className="rounded-[2rem] border-2 border-ink bg-white p-7 shadow-[5px_5px_0_#17131f]" key={label}>
-                <p className="display-title text-6xl text-violet md:text-7xl">{number}</p>
+                <p className={`display-title text-6xl md:text-7xl ${index === 0 ? "brand-blue" : index === 1 ? "brand-red" : "brand-green"}`}>{number}</p>
                 <p className="mt-2 text-lg font-black">{label}</p>
               </div>
             ))}
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {values.map(([Icon, title, text], index) => (
-              <article className={`rounded-[2rem] border-2 border-ink p-6 ${index === 0 ? "bg-coral" : index === 1 ? "bg-[#ddd4ef]" : "bg-lime"}`} key={title as string}>
+              <article className={`rounded-[2rem] border-2 border-ink/35 p-6 ${index === 0 ? "bg-[#ff8fa3]" : index === 1 ? "bg-[#ffcf3f]" : "bg-[#a9e889]"}`} key={title as string}>
                 <Icon className="h-10 w-10" />
                 <h3 className="mt-14 text-2xl font-black">{title as string}</h3>
                 <p className="mt-3 font-semibold leading-relaxed opacity-75">{text as string}</p>
@@ -63,7 +63,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-ink/15 bg-[#6c5796] py-16 text-white md:py-24">
+      <section className="border-y border-[#128fd0]/20 bg-[#128fd0] py-16 text-white md:py-24">
         <div className="site-container">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
             <div className="mb-5 flex gap-2 text-violet"><Sparkles /><Sparkles /><Sparkles /></div>
             <h2 className="max-w-4xl text-4xl font-black leading-tight tracking-tight md:text-6xl">Сначала понять, каким должен быть день. Потом — сделать его лучше ожиданий.</h2>
           </div>
-          <Link className="btn-primary" href="/contacts">Познакомиться с нами <ArrowRight className="h-5 w-5" /></Link>
+          <Link className="btn-primary" href="/contacts">Познакомиться с нами</Link>
         </div>
       </section>
     </main>

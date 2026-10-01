@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { assetPath } from "@/lib/site-paths";
 import {
-  ArrowRight,
   Atom,
   CakeSlice,
   Check,
@@ -16,28 +15,28 @@ const directions = [
     icon: PartyPopper,
     title: "Праздник под ключ",
     text: "Сценарий, команда, реквизит и координация — всё берём на себя.",
-    color: "bg-[#7660a9] text-white",
+    color: "bg-[#128fd0] text-white",
     href: "/programs",
   },
   {
     icon: WandSparkles,
     title: "Любимый герой",
     text: "Авторские образы и артисты, которые умеют быть с детьми на одной волне.",
-    color: "bg-[#efc3c7] text-[#282331]",
+    color: "bg-[#ff8fa3] text-[#253252]",
     href: "/characters",
   },
   {
     icon: Atom,
     title: "Шоу и мастер-классы",
     text: "Наука, фокусы, слаймы и творческие форматы для разных возрастов.",
-    color: "bg-[#f5e9bd] text-[#282331]",
+    color: "bg-[#ffcf3f] text-[#253252]",
     href: "/programs#shows",
   },
   {
     icon: CakeSlice,
     title: "Декор и сладкий стол",
     text: "Собираем пространство в единую историю — от фотозоны до торта.",
-    color: "bg-[#dceccd] text-[#282331]",
+    color: "bg-[#a9e889] text-[#253252]",
     href: "/programs#extras",
   },
 ];
@@ -56,9 +55,9 @@ export default function Home() {
                 "Профессиональные актёры",
                 "Авторский сценарий с захватывающим сюжетом",
                 "Более 15 фантастических шоу-программ на выбор",
-              ].map((item) => (
-                <span className="flex items-start gap-3 rounded-2xl bg-white/75 px-4 py-3 shadow-sm backdrop-blur-sm" key={item}>
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-violet text-white">
+              ].map((item, index) => (
+                <span className="party-card flex items-start gap-3 rounded-2xl border bg-white/88 px-4 py-3 backdrop-blur-sm" key={item}>
+                  <span className={`mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full text-white ${index === 0 ? "bg-[#128fd0]" : index === 1 ? "bg-[#ea3454]" : index === 2 ? "bg-[#35a64b]" : "bg-[#f47a31]"}`}>
                     <Check className="h-3.5 w-3.5" strokeWidth={3} />
                   </span>
                   <span className="leading-snug">{item}</span>
@@ -68,29 +67,28 @@ export default function Home() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link className="btn-primary group" href="/programs">
                 Выбрать программу
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link className="btn-secondary" href="/contacts">Обсудить праздник</Link>
             </div>
           </div>
 
           <div id="video" className="relative min-w-0 aspect-[3/2] scroll-mt-28">
-            <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-[#f7f1ec] shadow-[0_24px_70px_rgba(64,48,82,0.16)] sm:rounded-[2.5rem]">
-              <Image
-                src={assetPath("/images/hero-wide.png")}
-                alt="Фантастический праздник с ведущей и детьми"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-cover object-center saturate-[0.78] contrast-[0.96]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#352d42]/35 via-transparent to-white/10" />
+            <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-white p-2 shadow-[0_24px_70px_rgba(37,50,82,0.18)] sm:rounded-[2.5rem]">
+              <div className="grid h-full grid-cols-2 gap-2 overflow-hidden rounded-[1.55rem] sm:rounded-[2rem]">
+                <div className="relative min-w-0 overflow-hidden bg-[#f7efff]">
+                  <Image src={assetPath("/images/characters/masha-bear.jpg")} alt="Маша и Медведь — персонажи Фантастик Шоу" fill priority sizes="(max-width: 1024px) 50vw, 28vw" className="object-cover object-top" />
+                </div>
+                <div className="relative min-w-0 overflow-hidden bg-[#eefbff]">
+                  <Image src={assetPath("/images/characters/aladdin-jasmine.jpg")} alt="Аладдин и Жасмин — персонажи Фантастик Шоу" fill priority sizes="(max-width: 1024px) 50vw, 28vw" className="object-cover object-top" />
+                </div>
+              </div>
+              <div className="pointer-events-none absolute inset-2 bg-gradient-to-t from-[#253252]/35 via-transparent to-white/5" />
               <div className="absolute bottom-3 left-3 right-3 flex flex-nowrap items-center justify-between gap-2 rounded-2xl bg-white/90 p-3 backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-5 sm:gap-4 sm:rounded-[1.75rem] sm:p-5 md:p-6">
                 <div className="min-w-0">
-                  <p className="text-[0.6rem] font-black uppercase tracking-[0.15em] text-violet sm:text-xs">Фантастик Микс № 1</p>
-                  <p className="mt-1 text-sm font-black leading-tight sm:text-xl md:text-2xl">Посмотрите, как проходит праздник</p>
+                  <p className="text-[0.6rem] font-black uppercase tracking-[0.15em] text-[#ea3454] sm:text-xs">Настоящие костюмы</p>
+                  <p className="mt-1 text-sm font-black leading-tight sm:text-xl md:text-2xl">49 ярких образов на выбор</p>
                 </div>
-                <Link aria-label="Перейти к программам" className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-violet text-white sm:h-14 sm:w-14" href="/programs">
+                <Link aria-label="Посмотреть персонажей" className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#128fd0] text-white sm:h-14 sm:w-14" href="/characters">
                   <Play className="ml-0.5 h-4 w-4 fill-current sm:ml-1 sm:h-6 sm:w-6" />
                 </Link>
               </div>
@@ -107,7 +105,7 @@ export default function Home() {
               <h2 className="section-title max-w-4xl">Одна команда — десятки сценариев</h2>
             </div>
             <Link className="arrow-link" href="/programs">
-              Все направления <ArrowRight className="h-5 w-5" />
+              Все направления
             </Link>
           </div>
 
@@ -126,14 +124,14 @@ export default function Home() {
                 </div>
                 <h3 className="mt-16 text-3xl font-black leading-[1.02] tracking-tight">{title}</h3>
                 <p className="mt-4 font-semibold leading-relaxed opacity-85">{text}</p>
-                <ArrowRight className="mt-6 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                <span className="mt-6 inline-flex rounded-full bg-white/25 px-3 py-1 text-sm font-black">Подробнее</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-y border-ink/15 bg-[#342d3c] text-white">
+      <section className="border-y border-[#128fd0]/30 bg-[#128fd0] text-white">
         <div className="site-container grid grid-cols-2 md:grid-cols-4">
           {[
             ["1 800+", "праздников провели"],
@@ -170,9 +168,9 @@ export default function Home() {
                     <h3 className="text-4xl font-black tracking-tight">Научный бум</h3>
                     <p className="mt-3 max-w-md font-medium leading-relaxed text-[#625c6c]">Эксперименты, холодный пар и настоящее мороженое — дети внутри действия.</p>
                   </div>
-                  <p className="text-2xl font-black text-violet">от 21 900 ₽</p>
+                  <p className="text-2xl font-black text-[#ea3454]">от 21 900 ₽</p>
                 </div>
-                <Link className="arrow-link mt-7" href="/programs">Подробнее <ArrowRight className="h-5 w-5" /></Link>
+                <Link className="arrow-link mt-7" href="/programs">Подробнее</Link>
               </div>
             </article>
             <article className="overflow-hidden rounded-[2.25rem] border-2 border-ink bg-white shadow-[7px_7px_0_#17131f]">
@@ -186,9 +184,9 @@ export default function Home() {
                     <h3 className="text-4xl font-black tracking-tight">Танцы и конфетти</h3>
                     <p className="mt-3 max-w-md font-medium leading-relaxed text-[#625c6c]">Челленджи, DJ, свет и финал, который хочется пересматривать на видео.</p>
                   </div>
-                  <p className="text-2xl font-black text-violet">от 29 900 ₽</p>
+                  <p className="text-2xl font-black text-[#ea3454]">от 29 900 ₽</p>
                 </div>
-                <Link className="arrow-link mt-7" href="/programs">Подробнее <ArrowRight className="h-5 w-5" /></Link>
+                <Link className="arrow-link mt-7" href="/programs">Подробнее</Link>
               </div>
             </article>
           </div>
@@ -210,7 +208,7 @@ export default function Home() {
                 ["04", "Вы отдыхаете", "Координатор встречает команду и решает вопросы на площадке."],
               ].map(([number, title, text], index) => (
                 <article className={`min-h-[260px] rounded-[1.75rem] border border-ink/20 p-6 shadow-sm ${index === 0 ? "bg-sun" : index === 1 ? "bg-coral" : index === 2 ? "bg-[#ddd4ef]" : "bg-lime"}`} key={number}>
-                  <p className="display-title text-5xl text-violet">{number}</p>
+                  <p className={`display-title text-5xl ${index === 0 ? "brand-blue" : index === 1 ? "brand-red" : index === 2 ? "brand-green" : "brand-orange"}`}>{number}</p>
                   <h3 className="mt-10 text-2xl font-black">{title}</h3>
                   <p className="mt-3 font-semibold leading-relaxed opacity-70">{text}</p>
                 </article>
@@ -229,7 +227,7 @@ export default function Home() {
           <div className="rounded-[2rem] border-2 border-ink bg-white p-7 shadow-[6px_6px_0_#17131f]">
             <p className="text-sm font-black uppercase tracking-[0.14em] text-violet">Хотите так же?</p>
             <h2 className="mt-3 text-3xl font-black leading-tight">Получите три сценария под вашего ребёнка</h2>
-            <Link className="btn-primary mt-6 w-full" href="/contacts">Обсудить праздник <ArrowRight className="h-5 w-5" /></Link>
+            <Link className="btn-primary mt-6 w-full" href="/contacts">Обсудить праздник</Link>
           </div>
         </div>
       </section>

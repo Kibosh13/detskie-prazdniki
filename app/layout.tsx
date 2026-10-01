@@ -1,11 +1,30 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
+import localFont from "next/font/local";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { assetPath } from "@/lib/site-paths";
 import "./globals.css";
 
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
+
+const nunito = localFont({
+  src: [
+    { path: "./fonts/nunito-600.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/nunito-800.ttf", weight: "800", style: "normal" },
+    { path: "./fonts/nunito-900.ttf", weight: "900", style: "normal" },
+  ],
+  variable: "--font-nunito",
+  display: "swap",
+});
+
+const comfortaa = localFont({
+  src: "./fonts/comfortaa-700.ttf",
+  weight: "700",
+  style: "normal",
+  variable: "--font-comfortaa",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body
-        className="antialiased"
+        className={`${nunito.variable} ${comfortaa.variable} antialiased`}
         style={{
           "--pastel-watercolor-image": `url("${assetPath("/images/pastel-watercolor-bg.png")}")`,
         } as CSSProperties}

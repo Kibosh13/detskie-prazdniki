@@ -65,7 +65,7 @@ export function InquiryForm() {
         <input className="mt-0.5 h-5 w-5 accent-[#5b2bd0]" required type="checkbox" />
         Согласен на обработку данных для связи по заявке
       </label>
-      <Button className="mt-7 h-14 w-full rounded-full border-2 border-ink bg-violet text-base font-black text-white shadow-[4px_4px_0_#17131f] hover:bg-violet/90" type="submit">
+      <Button className="mt-7 h-14 w-full rounded-full border-2 border-ink bg-[#ea3454] text-base font-black text-white shadow-[4px_4px_0_#253252] hover:bg-[#d72748]" type="submit">
         Отправить заявку <Send className="h-5 w-5" />
       </Button>
       <p className="mt-4 text-center text-xs text-[#7b7482]">Демонстрационная форма — отправка подключается к CRM заказчика.</p>
