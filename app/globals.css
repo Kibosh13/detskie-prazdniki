@@ -224,6 +224,15 @@ button {
 .brand-green { color: #35a64b; }
 .brand-orange { color: #f47a31; }
 
+.logo-letter-title {
+  font-family: var(--font-rubik-bubbles), "Arial Rounded MT Bold", sans-serif;
+  font-weight: 400;
+  text-wrap: balance;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.96),
+    0 4px 10px rgba(37, 50, 82, 0.11);
+}
+
 .party-card {
   border-color: rgba(37, 50, 82, 0.28);
   box-shadow: 0 16px 36px rgba(37, 50, 82, 0.12);

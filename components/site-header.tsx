@@ -15,6 +15,42 @@ const nav = [
   ["Отзывы", "/#reviews"],
 ];
 
+const brandTitle = "ОРГАНИЗАЦИЯ ФАНТАСТИЧЕСКИХ ПРАЗДНИКОВ В МОСКВЕ И М.О.";
+const letterColors = ["#128fd0", "#ea3454", "#e8a900", "#35a64b", "#f47a31"];
+const colorfulBrandTitle = (() => {
+  let colorIndex = 0;
+
+  return Array.from(brandTitle, (character) => ({
+    character,
+    color: character === " " ? undefined : letterColors[colorIndex++ % letterColors.length],
+  }));
+})();
+
+function BrandTitle({ mobile = false }: { mobile?: boolean }) {
+  return (
+    <p
+      aria-label={brandTitle}
+      className={
+        mobile
+          ? "flex items-center justify-center px-2 py-3 text-center text-[clamp(0.82rem,3.8vw,1.05rem)] leading-[1.4] tracking-[0.045em]"
+          : "flex min-h-[88px] items-center justify-center px-6 py-4 text-center text-[clamp(1.1rem,1.65vw,1.65rem)] leading-[1.35] tracking-[0.045em]"
+      }
+    >
+      <span aria-hidden="true" className="logo-letter-title">
+        {colorfulBrandTitle.map(({ character, color }, index) =>
+          character === " " ? (
+            <span key={index}> </span>
+          ) : (
+            <span key={index} style={{ color }}>
+              {character}
+            </span>
+          ),
+        )}
+      </span>
+    </p>
+  );
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
@@ -62,9 +98,7 @@ export function SiteHeader() {
           <Link aria-label="Написать в Telegram" className="grid h-10 w-10 place-items-center rounded-full border-2 border-[#128fd0] bg-[#eaf8ff] text-[#128fd0]" href="/contacts"><Send className="h-4 w-4" /></Link>
         </div>
 
-        <p className="flex min-h-[88px] items-center justify-center px-6 text-center font-[family-name:var(--font-comfortaa)] text-[clamp(1.15rem,1.9vw,1.85rem)] font-bold uppercase leading-[1.12] tracking-[-0.035em]">
-          <span className="brand-blue">Организация&nbsp;</span><span className="brand-red">фантастических&nbsp;</span><span className="brand-green">праздников&nbsp;</span><span className="brand-orange">в Москве и М.О.</span>
-        </p>
+        <BrandTitle />
       </div>
 
       <div className="site-container grid min-h-[146px] grid-cols-[82px_minmax(0,1fr)] grid-rows-[72px_auto] xl:hidden">
@@ -94,9 +128,7 @@ export function SiteHeader() {
           </button>
         </div>
 
-        <p className="flex flex-wrap items-center justify-center px-3 py-3 text-center font-[family-name:var(--font-comfortaa)] text-[clamp(0.82rem,4vw,1.05rem)] font-bold uppercase leading-[1.15] tracking-[-0.025em]">
-          <span className="brand-blue">Организация&nbsp;</span><span className="brand-red">фантастических&nbsp;</span><span className="brand-green">праздников&nbsp;</span><span className="brand-orange">в Москве и М.О.</span>
-        </p>
+        <BrandTitle mobile />
       </div>
 
       {open && (

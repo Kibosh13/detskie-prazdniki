@@ -26,6 +26,14 @@ const comfortaa = localFont({
   display: "swap",
 });
 
+const rubikBubbles = localFont({
+  src: "./fonts/rubik-bubbles-400.ttf",
+  weight: "400",
+  style: "normal",
+  variable: "--font-rubik-bubbles",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Фантастик Шоу — детские праздники в Москве",
@@ -50,7 +58,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body
-        className={`${nunito.variable} ${comfortaa.variable} antialiased`}
+        className={`${nunito.variable} ${comfortaa.variable} ${rubikBubbles.variable} antialiased`}
         style={{
           "--pastel-watercolor-image": `url("${assetPath("/images/pastel-watercolor-bg.png")}")`,
         } as CSSProperties}
