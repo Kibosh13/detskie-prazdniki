@@ -32,8 +32,8 @@ function BrandTitle({ mobile = false }: { mobile?: boolean }) {
       aria-label={brandTitle}
       className={
         mobile
-          ? "flex items-center justify-center px-2 py-3 text-center text-[clamp(0.82rem,3.8vw,1.05rem)] leading-[1.4] tracking-[0.045em]"
-          : "flex min-h-[88px] items-center justify-center px-6 py-4 text-center text-[clamp(1.1rem,1.65vw,1.65rem)] leading-[1.35] tracking-[0.045em]"
+          ? "flex items-center justify-center px-2 py-3 text-center text-[clamp(1rem,4.3vw,1.2rem)] leading-[1.45] tracking-[0.02em]"
+          : "flex min-h-[94px] items-center justify-center px-6 py-4 text-center text-[clamp(1.25rem,1.9vw,1.95rem)] leading-[1.35] tracking-[0.025em]"
       }
     >
       <span aria-hidden="true" className="logo-letter-title">
